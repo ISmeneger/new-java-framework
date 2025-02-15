@@ -1,11 +1,11 @@
 import io.restassured.response.Response;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import static constants.CommonConstants.BASE_URI;
 
 import static io.restassured.RestAssured.given;
 
 public class SmokeApiTests {
-    private static final String BASE_URL = "https://petstore.swagger.io/v2/";
 
     @Test
     void simpleTest() {
@@ -25,7 +25,7 @@ public class SmokeApiTests {
         Response response = given()
                     .header("accept", "application/json")
                     .header("Content-Type", "application/json")
-                    .baseUri(BASE_URL)
+                    .baseUri(BASE_URI)
                 .when()
                     .body(body)
                     .post("user")
