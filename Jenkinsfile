@@ -12,7 +12,7 @@ pipeline {
   stages {
     stage('Checkout') {
       steps {
-        git branch: '12-jenkins', url: 'https://github.com/topsycreed/new-java-framework.git'
+        git branch: 'master', url: 'https://github.com/ISmeneger/new-java-framework.git'
       }
     }
 
